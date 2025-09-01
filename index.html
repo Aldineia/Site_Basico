@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página - Módulo 1 - Primeiros Passos com HTML</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif; 
+            margin: 0;
+        }
+        .datetime{
+            color: #ffffff;
+        }
+        .header {
+            background: #746af9;
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .header h1 {      
+            font-size: 40px;
+        }
+        .navbar{
+            overflow: hidden;
+            background-color: #4b4a4a;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color:white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a.right {
+            float: right;
+        }
+        .navbar a:hover {
+            background-color: #fffdfd;
+            color: rgb(22, 22, 22);
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .side {
+            flex: 30%;
+            background:#f1f1f1;
+            padding: 20px;
+        }
+        .main {
+            flex: 70%;
+            background-color: white;
+            padding: 20px;
+        }
+        .text{
+            background:  #ecebeb;
+            width: 100%;
+            padding: 20px;
+        }
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+        }
+        @media screen and (max-width: 700px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style> 
+<script>
+function updateDateTime() {
+    const now = new Date();
+    document.getElementById('datetime').innerText = now.toLocaleString();
+}
+window.onload = updateDateTime;
+</script>
+<header>
+<body>
+<div class="header">
+        <h1 id="inicio">Primeiros Passos em HTML</h1>
+        <p><u>Bem-vindo ao meu site!</u></p>          
+        <div class="datetime">
+            <p><i style="font-size: 24px;"class="far"></i> <span id="datetime"></span></p>
+        </div>
+    </div>
+    <div class="navbar">
+        <a href="https://github.com/Aldineia" title="Clique aqui e confira"target="_blank" >Autora</a>
+        <a href="https://www.w3schools.com/html/default.asp" title="Clique aqui e confira" target="_blank" >Introdução HTML</a>
+        <a href=" https://www.w3schools.com/html/html_basic.asp" title="Clique aqui e confira" target="_blank">HTML Básico</a> 
+    </div>
+    <div class="row">
+        <div class="side">
+            <h2>Índice</h2>
+            <div class="text" style="height: 300px;">
+                <ul>
+                    <li><a href="#Linguagem">Linguagem de Programação</a></li><br>
+                    <li><a href="#Programação">HTML é uma linguagem de programação?<i></i></a></li><br>
+                    <li><a href="#Clientes">Linguagem Server-side</a></li><br>
+                    <li><a href="#Client">Linguagem Client-side</a></li><br>
+                    <li><a href="#listas ">Entendendo listas ordenadas e não ordenadas.</a></li>
+                </ul>
+            </div>
+            <hr>
+            <h3>Citação</h3>
+            <blockquote><i><mark>"A web não é uma rede de computadores; a web é uma rede de pessoas." </i></blockquote>
+            <p>
+            <a href="https://achievement.org/achiever/sir-timothy-berners" target="_blank" title="Clique aqui e confira"> <i>Tim Berners-Lee</i><sup> (1)</sup></a>
+            </p>
+            <hr>
+            <br>
+            <h3>Resumo</h3>
+            <h4>História do computador</h4>
+                <div class="text">
+                    <ol>
+                        <li><strong>Origens e Conceitos Iniciais</strong></li>
+                        <ul>
+                            <li>Ábaco (cerca de 2.400 a.C): Primeiro instrumento de cálculo.</li>
+                            <li>Máquinas mecânicas:
+                                <ul>
+                                    <li>Pascalina (1642):Calculadora mecânica de Blaise Pascal.</li>
+                                    <li>Máquina de Leibniz (1673): Realizava as quatro operações básicas.</li>
+                                </ul>
+                            </li>
+                            <li>Máquina Analítica (1873): Projeto de Charles Baddage.</li>
+                            <li>Ada Lovelace: Criou  o primeiro algoritmo para a máquina de Babbage - Primeira programadora da história.</li>
+                        </ul>
+                        <br><br>
+                        <li><strong>Primeira Geração (1940-1956)</strong></li>
+                        <ul>
+                            <li>Computadores usavam <b>válvulas eletrônicas.</b> </li>
+                            <li>Eram enormes, lentos, consumiam muita energia.</li>
+                            <li>Exemplo.: <b>ENIAC</b> (1946) - primeiro computador eletrônico de uso geral.</li>
+                        </ul>
+                        <br><br>
+                        <li><strong>Segunda Geração (1956 - 1964)</strong></li>
+                        <ul>
+                            <li>Uso de transistores (substituíram as válvulas).</li>
+                            <li>computadores menores, mais rápidos e mais confiáveis.</li>
+                            <li>Início das linguagens de programação como COBOL e FORTAN.</li>
+                        </ul>
+                        <br><br>
+                        <li><strong>Terceira Geração (1965 - 1971)</strong></li>
+                        <ul>
+                            <li>Introdução dos circuitos integrados (chips).</li>
+                            <li>Computadores mais compactos, com maior capacidade.</li> 
+                            <li>Surgimento dos sistemas operacionais.</li>
+                            <li>Surgem os computadores pessoais (PCs).</li>
+                        </ul>
+                        <br>
+                        <li><strong>Quarta Geração (1971 - hoje)</strong></li>
+                        <ul>
+                            <li>Aparecimento do microprocessador (CPU em um chip).</li>
+                            <ul><li><b>Apple</b>1 (1976),<b> IBM PC</b> (1981).</li></ul>
+                            <li><b>Internet</b> começa a se popularizar nos anos 1990.</li>
+                            <li>Crescimento da informática em todos os setores.</li>
+                            </ul>
+                            <br><br>
+                        <li><strong>Quinta Geração ( presente e futuro).</strong></li>
+                        <ul>
+                            <li>Computadores com <b>inteligência artificial</b>e <b>aprendizado de máquina.</b></li>
+                            <li>Uso de <b>comutação em nuvem</b>,<b>realidade aumentada, quantum computing</b> e <b> IoT</b> (internet das coisas).</li>
+                            <li>Dispositivos cada vez menores, mais rápidos e inteligentes.</li>
+                        </ul>
+                        </ul>
+                        </ol>
+                    </ol>
+                </div>
+                <p>
+                <strong>Veja mais:</strong>
+                <a href="https://www.dio.me/" target="_blank" title="Clique aqui e confira"><i>Digital Innovation One <sup> (2)</sup></i> </a>
+            </p>
+        </div>
+        <div class="main">
+            <h2 id="Linguagem"> Linguagem de Programação</h2>
+            <div class="text" style="height:150;">
+                <p>Uma <b>linguagem de programação</b> é um conjunto de regras e símbolos usados para escrever instruções  que dizem a um computador<b> o que fazer.</b></p>
+                Em Resumo:
+                <ul>
+                    <li>É um aforma de comunicação entre humanos e computadores.</li>
+                    <li>Serve para criar programas, sistemas, sites, aplicativos, jogos, etc.</li>
+                    <li>Transforma lógica e ideias em código que o computador entende.</li>
+                </ul>
+                Exemplos de linguagens de programação:
+                <ul>
+                    <li><b>Python</b> -> muito usada em ciências de dados, inteligência artificial e automação.</li>
+                    <li><b>JavaScript</b> -> usada principalmente para páginas e aplicações web.</li>
+                    <li><b>Java</b> ->comum em sistemas corporativos e aplicativos Android.</li>
+                    <li><b> C e C++</b>-> usada em sistemas operacionais e software de alto desempenho.</li>
+                </ul>
+            </div>
+            <p>
+                <strong>Veja mais:</strong>
+                <a href="https://youtu.be/pYux8zKyVX4?si=dgU0LSyG8KTpXFHO" target="_blank" title="Clique aqui e confira"><i>GCFAprendeLivre<sup> (3)</sup></i> </a>
+            </p>
+            <hr>
+            <h2 id="Programação"> HTML é uma linguagem de programação? </h2>
+            <div class="text" style="height: 300px;">
+                <blockquote>
+                <p>O <b>HTML (HyperText Markup Languagem,</b> ou Linguagem de Marcação de Hipertexto) <b>não é uma linguagem de programação</b>, e sim uma <b>linguagem de marcação.</b></p>
+                O que isso significa:
+                <ul>
+                    <li>O HTML <b>define a estrutura e o contéudo</b> de uma página da web.</li>
+                    <li> Ele organiza textos, imagens, links, videos e outros elementos para que o navegador (Chrome, Firefox, etc.) saiba como exibir a página.</li>
+                    <li>Funciona  em conjunto com outras tecnologias:</li>
+                    <ul>
+                        <li><b><u>CSS</u></b> -> define o estilo(cores, fontes, layout).</li>
+                        <li><u><b>JavaScript</b></u> -> adiciona interatividade e lógica.</li>
+                    </ul>
+                </ul>
+                <p><b>O HTML é a base da web</b>, responsável por estruturar o que vemos em uma página.</p>
+                </blockquote>
+            </div>
+            <p>
+                <strong>Veja mais:</strong>
+                <i><a href="https://pt.wikipedia.org/wiki/HTML"  target="_blank"title="Clique aqui e confira">Wikpédia<sup> (4) </sup></a></i>
+            </p>
+            <hr>
+            <h2 id="Clientes">Linguagem Server-side. </h2>
+            <small> <i> <a href="#inicio">Voltar</a></i></small>
+            <div class="text" style="height:190px;">
+                <blockquote>
+                    <p>É a linguagem que roda no servidor de um site ou sistema.<br>
+                        Ou seja quando você acessa uma página na internet:
+                        <ol>
+                            <li>Seu navegador (cliente) faz um pedido para o servidor</li>
+                            <li>O servidor processa esse pedido usando uma linguagem server-side.</li>
+                            <li>Ele consulta banco de dados, aplica regras, gera o conteúdo.</li>
+                            <li>Só então envia o resultado pronto para o navegador.</li>
+                        </ol>
+                    </p>
+                </blockquote>
+            </div>
+            <p>
+                <strong>Veja mais:</strong> 
+                <i><a href="https://pt.wikipedia.org/wiki/Linguagem_server-side" target="_blank" title="Clique aqui e confira">wikipedia<sup> (5)</sup></a></i>
+            </p>
+            <hr>
+            <h2 id="Client">Linguagem Client-side</h2>
+            <div class="text" style="height:200px">
+                <p>
+                    <ul>
+                        <li><b>Linguagem Client-side</b> -> é a que roda no navegador do usuário (lado do cliente).</li>
+                        <li><b>Função</b> -> controla o que o usuário<b>vê e interage</b> na página.</li>
+                        <li><b>Principais linguagens:</b></li><br>
+                        <ul>
+                            <li><b>HTML</b> -> estrutura</li>
+                            <li><b>CSS</b> -> aparência/ estilo</li>
+                            <li><b>JavaScript</b> -> interatividade</li>
+                        </ul>
+                        
+                        
+                        
+                        </p>
+            </div>
+            <p>
+                <strong>Veja mais:</strong> 
+                <i><a href="https://pt.wikipedia.org/wiki/Linguagem_client-side" target="_blank" title="Clique aqui e confira">Wikipédia <sup> (6)</sup></a></i>
+            </p>
+            <hr>
+            <p>
+            <h2 id="listas">Entendendo listas ordenadas e não ordenadas</h2>
+            <small><a href="#inicio">Voltar</a></small>
+            <div class="text" style="height: 190px;">
+                    Listas HTML permitem que desenvolvedores web<b> agrupem um conjunto de itens relacionados</b> em listas.
+                    Uma<b> lista ordenada </b>  começa com a <b>( ol ) tag </b>. Cada item da lista começa com a ( li ) tag. Os itens da lista <b>serão marcados com números por padrão</b>.<br>
+                    Uma <b>lista não ordenada</b>começa com a<b> (ul)tag</b> . Cada item da lista começa com a<b> ( li ) tag</b> .Os itens da lista serão marcados com marcadores<b> (pequenos círculos pretos)</b> por padrão.
+            </p>
+        </div>
+        <p>
+            <strong>Veja mais:</strong> 
+            <i><a href="https://youtu.be/xX042WXQruM?si=lxXmsfIpJg1lRWzt"target="_blank" title="Clique aqui e confira"> desenvolvedores Full Stack<sup> (7)</sup></a></i>
+        </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h6>REFERÊNCIA</h6>
+<a href="https://www.dio.me/" target="_blank" title="Clique aqui e confira">DIO</a> / 
+<a href="https://www.w3schools.com/" target="_blank" title="Clique aqui e confira">w3schools</a>
+    </div>
+        </p>
+    </div>
+</body>
+</html>
+
